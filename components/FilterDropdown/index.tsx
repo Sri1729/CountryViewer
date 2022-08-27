@@ -15,7 +15,7 @@ export const FilterDropdown = () => {
           dropdown-toggle
           pl-4
           pr-2
-          py-2.5
+          py-2
           dark:bg-darkBlue
           font-medium
           text-xs

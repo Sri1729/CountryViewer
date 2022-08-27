@@ -3,7 +3,7 @@ import { AiOutlineSearch } from "react-icons/ai";
 
 export const SearchBox = () => {
   return (
-    <div className="flex flex-row p-2 items-center rounded-md shadow-[0px_0px_5px_rgba(0,0,0,0.25)] dark:bg-darkBlue">
+    <div className="flex flex-row h-fit p-2 items-center rounded-md shadow-[0px_0px_5px_rgba(0,0,0,0.25)] dark:bg-darkBlue">
       <label htmlFor="search-box" className="px-4">
         <AiOutlineSearch
           size={20}

@@ -8,7 +8,7 @@ const Home: NextPage<{ countries: any }> = ({ countries }) => {
   return (
     <>
       <Header />
-      <div className="flex flex-1 h-full">
+      <div className="flex flex-1 h-full p-10 bg-white dark:bg-darkerBlue">
         <AllCountries />
       </div>
     </>

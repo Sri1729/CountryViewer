@@ -3,8 +3,8 @@ import { SearchBox, FilterDropdown } from "../../components";
 
 export const AllCountries = () => {
   return (
-    <div className="flex flex-1 h-full bg-transparent dark:bg-darkerBlue">
-      <div className="flex flex-1 flex-row m-10 justify-between">
+    <div className="flex flex-1 h-fit">
+      <div className="flex flex-1 h-fit flex-row justify-between">
         <div className="">
           <SearchBox />
         </div>
