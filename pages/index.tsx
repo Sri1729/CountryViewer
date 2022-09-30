@@ -4,12 +4,11 @@ import { Header } from "../components";
 import { AllCountries } from "../screens";
 
 const Home: NextPage<{ countries: any }> = ({ countries }) => {
-  console.log(countries);
   return (
     <>
       <Header />
-      <div className="flex flex-1 h-full p-10 bg-white dark:bg-darkerBlue">
-        <AllCountries />
+      <div className="flex flex-1 p-10 bg-white dark:bg-darkerBlue">
+        <AllCountries countries={countries} />
       </div>
     </>
   );
