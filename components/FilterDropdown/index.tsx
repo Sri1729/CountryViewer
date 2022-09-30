@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 import { RiArrowDropDownLine } from "react-icons/ri";
+import { useStore } from "../../providers";
 
-export const FilterDropdown = () => {
+import { observer } from "mobx-react-lite";
+
+export const FilterDropdown = observer(() => {
   const [open, setOpen] = useState(false);
-  const array = ["A", "B"];
+  const store = useStore();
+  const array = store?.countries?.regionsList;
 
   return (
     <div className="flex justify-center">
@@ -12,6 +16,7 @@ export const FilterDropdown = () => {
           <button
             onClick={() => setOpen(!open)}
             className="
+            min-w-[132px]
           dropdown-toggle
           pl-4
           pr-2
@@ -29,14 +34,17 @@ export const FilterDropdown = () => {
           ease-in-out
           flex
           items-center
+          justify-between
         "
             type="button"
             id="dropdownMenuButton1"
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
-            Filter by Region...
-            <RiArrowDropDownLine size={25} className="ml-4" />
+            {store?.countries?._selectedRegion
+              ? store?.countries?._selectedRegion
+              : "Filter by Region..."}
+            <RiArrowDropDownLine size={25} />
           </button>
           <ul
             className={`
@@ -62,8 +70,12 @@ export const FilterDropdown = () => {
             aria-labelledby="dropdownMenuButton1"
           >
             {array.map((item) => (
-              <li key={item}>
+              <li key={`${item}`}>
                 <button
+                  onClick={() => {
+                    store.countries.selectedRegion = item;
+                    setOpen(false);
+                  }}
                   className="
                   text-left
               dropdown-item
@@ -83,7 +95,7 @@ export const FilterDropdown = () => {
               dark:hover:bg-white
             "
                 >
-                  Action
+                  {item}
                 </button>
               </li>
             ))}
@@ -92,4 +104,4 @@ export const FilterDropdown = () => {
       </div>
     </div>
   );
-};
+});
