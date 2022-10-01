@@ -1,16 +1,12 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { Header } from "../components";
 import { AllCountries } from "../screens";
 
-const Home: NextPage<{ countries: any }> = ({ countries }) => {
+const Home: NextPage = () => {
   return (
-    <>
-      <Header />
-      <div className="flex flex-1 p-10 bg-white dark:bg-darkerBlue">
-        <AllCountries countries={countries} />
-      </div>
-    </>
+    <div className="flex flex-1 p-10 bg-white dark:bg-darkerBlue">
+      <AllCountries />
+    </div>
   );
 };
 
@@ -19,7 +15,11 @@ export async function getStaticProps() {
   const countries = await res.json();
   return {
     props: {
-      countries,
+      hydrationData: {
+        countriesStore: {
+          data: countries,
+        },
+      },
     },
   };
 }
