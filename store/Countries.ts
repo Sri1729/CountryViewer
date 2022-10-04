@@ -17,6 +17,7 @@ export class CountriesStore {
   allCountries: Country[] = [];
   _searchText: string = "";
   _selectedRegion: String = "";
+  _selectedCountry: Country | undefined = undefined;
 
   constructor(root: RootStore) {
     this.root = root;
@@ -26,6 +27,7 @@ export class CountriesStore {
   hydrate(data?: CountriesHydration) {
     if (data) {
       this.allCountries = data.data;
+      this.selectedCountry = data.data?.[0];
     }
   }
 
@@ -64,5 +66,15 @@ export class CountriesStore {
 
   public get selectedRegion(): String {
     return this._selectedRegion;
+  }
+
+  public set selectedCountry(val: Country | undefined) {
+    runInAction(() => {
+      this._selectedCountry = val;
+    });
+  }
+
+  public get selectedCountry(): Country | undefined {
+    return this._selectedCountry;
   }
 }

@@ -4,7 +4,7 @@ import { AllCountries } from "../screens";
 
 const Home: NextPage = () => {
   return (
-    <div className="flex flex-1 p-10 bg-white dark:bg-darkerBlue">
+    <div>
       <AllCountries />
     </div>
   );
