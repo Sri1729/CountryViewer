@@ -5,11 +5,11 @@ export const AllCountries: FC = () => {
   return (
     <div className="flex-col flex-1  h-fit">
       {/* Searchbox and filter */}
-      <div className="flex flex-1 h-fit flex-row justify-between">
+      <div className="flex flex-1 h-fit flex-col sm:flex-row sm:justify-between">
         <div>
           <SearchBox />
         </div>
-        <div>
+        <div className="mt-5 sm:mt-0">
           <FilterDropdown />
         </div>
       </div>

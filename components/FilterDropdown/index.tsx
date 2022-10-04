@@ -10,7 +10,7 @@ export const FilterDropdown = observer(() => {
   const array = store?.countries?.regionsList;
 
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-start sm:justify-center">
       <div>
         <div className="dropdown relative">
           <button

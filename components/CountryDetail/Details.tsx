@@ -93,7 +93,7 @@ export const Details: React.FC = observer(() => {
         <div className="flex flex-row flex-wrap p-1">
           {country?.borders?.map((item) => (
             <div
-              className="text-sm px-3 py-[1px] mt-1 mr-4 rounded-md shadow-[0px_0px_5px_rgba(0,0,0,0.25)] bg-white sm:mt-0 dark:bg-darkBlue"
+              className="text-sm px-3 py-[1px] my-1 mr-4 rounded-md shadow-[0px_0px_5px_rgba(0,0,0,0.25)] bg-white dark:bg-darkBlue"
               key={item}
             >
               {item}

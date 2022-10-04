@@ -16,7 +16,7 @@ export const SearchBox = observer(() => {
       </label>
 
       <input
-        className="min-w-[300px] dark:text-gray-300 dark:placeholder:text-gray-400 bg-transparent focus:outline-none"
+        className="sm:min-w-[300px] dark:text-gray-300 dark:placeholder:text-gray-400 bg-transparent focus:outline-none"
         id="search-box"
         placeholder="Search for a country..."
         value={countriesStore.searchText}
