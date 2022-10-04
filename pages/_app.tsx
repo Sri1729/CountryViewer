@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <div className="sticky top-0 z-10">
           <Header />
         </div>
-        <div>
+        <div className="flex flex-1 p-10 bg-white dark:bg-darkerBlue">
           <Component {...pageProps} />
         </div>
       </>

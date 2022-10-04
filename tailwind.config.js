@@ -6,6 +6,11 @@ module.exports = {
   ],
   darkMode: "class",
   theme: {
+    screens: {
+      sm: "560px",
+      md: "768px",
+      lg: "1024px",
+    },
     extend: {
       colors: {
         darkBlue: "hsl(209, 23%, 22%)",
