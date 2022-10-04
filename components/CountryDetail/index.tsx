@@ -10,7 +10,7 @@ export const CountryDetail: React.FC = observer(() => {
 
   console.log(country, "country");
   return (
-    <div className="flex flex-col w-full mt-10 sm:flex-row sm:justify-between sm:items-center">
+    <div className="flex flex-col w-full mt-10 sm:flex-row sm:items-center">
       <Image
         width={300}
         height={300}
@@ -18,7 +18,7 @@ export const CountryDetail: React.FC = observer(() => {
         alt={`flag-${country?.name?.common}`}
       />
 
-      <div className="flex mt-2 sm:ml-5 sm:mt-0">
+      <div className="flex mt-2 sm:ml-20 sm:mt-0">
         <Details />
       </div>
     </div>
