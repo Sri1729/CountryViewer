@@ -23,7 +23,7 @@ export const Country: FC = observer(() => {
       <div>
         <BackButton />
       </div>
-      <div className="flex flex-1 w-full">
+      <div className="flex w-full">
         <CountryDetail />
       </div>
     </div>
