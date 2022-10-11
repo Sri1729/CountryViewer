@@ -29,9 +29,9 @@ Users should be able to:
 ### Screenshot
 
 ![./screenshots/dark-allCountries.png](./screenshots/dark-allCountries.png)
-![./screenshots/dark-countriyDetail.png](./screenshots/dark-countriyDetail.png)
+![./screenshots/dark-countryDetail.png](./screenshots/dark-countryDetail.png)
 ![./screenshots/light-allCountries.png](./screenshots/light-allCountries.png)
-![./screenshots/light-countriyDetail.png](./screenshots/light-countriyDetail.png)
+![./screenshots/light-countryDetail.png](./screenshots/light-countryDetail.png)
 
 ### Links
 
