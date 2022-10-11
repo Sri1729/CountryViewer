@@ -91,6 +91,8 @@ export const Details: React.FC = observer(() => {
           <span className="font-medium">Border Countries : </span>
         </h6>
         <div className="flex flex-row flex-wrap p-1">
+          {country?.borders?.length === 0 ||
+            (!country?.borders && <p className="dark:text-white">N.A.</p>)}
           {country?.borders?.map((item) => (
             <div
               className="text-sm px-3 py-[1px] my-1 mr-4 rounded-md shadow-[0px_0px_5px_rgba(0,0,0,0.25)] bg-white dark:bg-darkBlue"

@@ -8,7 +8,6 @@ export const CountryDetail: React.FC = observer(() => {
   const store = useStore();
   const country = store?.countries?.selectedCountry;
 
-  console.log(country, "country");
   return (
     <div className="flex flex-col w-full mt-10 sm:flex-row sm:items-center">
       <Image

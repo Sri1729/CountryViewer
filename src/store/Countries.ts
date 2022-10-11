@@ -47,7 +47,9 @@ export class CountriesStore {
         item.name.common.toLowerCase().includes(this._searchText.toLowerCase())
       )
       .filter((item) =>
-        !!this._selectedRegion ? item.region === this._selectedRegion : true
+        !!this._selectedRegion && this._selectedRegion !== "All Regions"
+          ? item.region === this._selectedRegion
+          : true
       );
   }
 

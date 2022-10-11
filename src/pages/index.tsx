@@ -3,11 +3,7 @@ import Head from "next/head";
 import { AllCountries } from "../screens";
 
 const Home: NextPage = () => {
-  return (
-    <div>
-      <AllCountries />
-    </div>
-  );
+  return <AllCountries />;
 };
 
 export async function getStaticProps() {

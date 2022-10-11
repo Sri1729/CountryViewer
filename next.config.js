@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 
-let assetPrefix = "src/";
-let basePath = "src/";
+let assetPrefix = "";
+let basePath = "";
 
 const isGithubActions = process.env.GITHUB_ACTIONS || false;
 

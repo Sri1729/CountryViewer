@@ -7,7 +7,7 @@ import { observer } from "mobx-react-lite";
 export const FilterDropdown = observer(() => {
   const [open, setOpen] = useState(false);
   const store = useStore();
-  const array = store?.countries?.regionsList;
+  const array = ["All Regions", ...store?.countries?.regionsList];
 
   return (
     <div className="flex justify-start sm:justify-center">
