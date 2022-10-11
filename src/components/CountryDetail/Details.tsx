@@ -94,12 +94,15 @@ export const Details: React.FC = observer(() => {
           {country?.borders?.length === 0 ||
             (!country?.borders && <p className="dark:text-white">N.A.</p>)}
           {country?.borders?.map((item) => (
-            <div
+            <button
+              onClick={() => {
+                store?.countries?.onBorderCountryPress(item);
+              }}
               className="text-sm px-3 py-[1px] my-1 mr-4 rounded-md shadow-[0px_0px_5px_rgba(0,0,0,0.25)] bg-white dark:bg-darkBlue"
               key={item}
             >
               {item}
-            </div>
+            </button>
           ))}
         </div>
       </div>

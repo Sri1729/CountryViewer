@@ -66,6 +66,12 @@ export class CountriesStore {
     });
   }
 
+  public onBorderCountryPress(val: string) {
+    const borderCountry = this.allCountries.filter((item) => item.cca3 === val);
+    runInAction(() => {
+      this._selectedCountry = borderCountry?.[0];
+    });
+  }
   public get selectedRegion(): String {
     return this._selectedRegion;
   }
