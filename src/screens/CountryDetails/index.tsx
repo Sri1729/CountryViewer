@@ -8,10 +8,12 @@ export const Country: FC = observer(() => {
   const selectedCountry = store?.countries?.selectedCountry;
   if (!selectedCountry) {
     return (
-      <div className="flex flex-1 flex-row">
+      <div>
         <div className="flex flex-row items-center">
-          <BackButton />
-          <span className="dark:text-white">
+          <div>
+            <BackButton />
+          </div>
+          <span className="p-5 dark:text-white">
             No Country Selected. Please navigate back and come again.
           </span>
         </div>
