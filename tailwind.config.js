@@ -6,6 +6,9 @@ module.exports = {
   ],
   darkMode: "class",
   theme: {
+    fontFamily: {
+      sans: "Nunito Sans",
+    },
     screens: {
       sm: "560px",
       md: "768px",
